@@ -1,0 +1,5 @@
+# Ignore the exe files
+*.exe
+
+#Ignore the dist folder
+dist/
