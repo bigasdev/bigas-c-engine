@@ -5,7 +5,11 @@
         "sdl_image.h": "c",
         "test.h": "c",
         "player.h": "c",
-        "draw.h": "c"
+        "draw.h": "c",
+        "inttypes.h": "c",
+        "hero.h": "c"
     },
+    "[markdown]": 
+    { "editor.quickSuggestions": true },
     "C_Cpp.errorSquiggles": "Enabled"
 }
