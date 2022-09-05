@@ -2,6 +2,6 @@
 
 ## About
 
-![logo](heroes-of-loot/resources/logo.png)
+![logo](resources/logo.png)
 
 
