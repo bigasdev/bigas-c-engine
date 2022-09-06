@@ -26,6 +26,10 @@ typedef struct {
     SDL_Texture *frames[4];
 } Entity;
 
+typedef struct {
+    SDL_Texture *texture;
+} UI_Entity;
+
 extern App app;
 
 #endif

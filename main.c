@@ -15,22 +15,34 @@ void cleanup(){
 
 }
 
-
-int main(int argc, char *argv[]){
-    Test();
-
-    SDL_Delay(1600);
-
+void start(){
 	memset(&app, 0, sizeof(App));
     memset(&Hero, 0, sizeof(Entity));
+	memset(&splash, 0, sizeof(UI_Entity));
 
 	initSDL();
-
 	atexit(cleanup);
 
-	throwSplash();
-
 	createHero();
+	initSplash();
+}
+
+
+int main(int argc, char *argv[]){
+	start();
+
+	while(!pressed)
+	{
+		prepareScene();
+
+		doInput();
+
+		blit(splash.texture, 450, 250);
+
+		presentScene();
+
+		SDL_Delay(32);
+	}
 
 	while (1)
 	{

@@ -1,15 +1,21 @@
 #include "src/include/SDL2/SDL.h"
 #include "src/draw.h"
 #include "src/defs.h"
+#include "src/structs.h"
 #include "src/splash.h"
 #include <stdio.h>
 
-void throwSplash(){
-    SDL_Texture *myTexture = loadTexture(SPLASH_SCREEN);
+UI_Entity splash;
+int pressed = 0;
 
+void initSplash(){
+    splash.texture = loadTexture(SPLASH_SCREEN);
 #if DEMO
-    printf("\nThrowing the splash screen!! Press any key to continue");
+    printf("\nStarting the splash screen!! Press any key to continue");
 #endif
-    
-    blit(myTexture, 0, 0);
+}
+void splashInput(){
+    if(app.interacted){
+        pressed = 1;
+    }
 }
