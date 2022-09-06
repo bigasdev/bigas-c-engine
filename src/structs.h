@@ -11,6 +11,7 @@ typedef struct{
     int down;
     int left;
     int right;
+    int interacted;
 } App;
 
 typedef struct {
