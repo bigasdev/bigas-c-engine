@@ -4,3 +4,4 @@
 #Ignore the dist folder
 dist/
 debug/
+output/
