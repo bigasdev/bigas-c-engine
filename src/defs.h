@@ -3,5 +3,6 @@
 
 #define SPLASH_SCREEN "resources/logo.png"
 
-
-#define DEMO 1
+#ifndef DEMO
+    #define DEMO 0
+#endif
