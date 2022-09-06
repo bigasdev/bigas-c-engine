@@ -28,7 +28,7 @@ void start(){
 	atexit(cleanup);
 
 	createHero();
-	
+
 #if SPLASH
 	initSplash();
 #endif
@@ -48,7 +48,7 @@ int main(int argc, char *argv[]){
 
 		splashInput();
 
-		blit(splash.texture, 450, 250);
+		blit(splash.texture, 450, 0);
 
 		presentScene();
 
