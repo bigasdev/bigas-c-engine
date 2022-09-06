@@ -31,11 +31,14 @@ void start(){
 int main(int argc, char *argv[]){
 	start();
 
+	//splash screen loop
 	while(!pressed)
 	{
 		prepareScene();
 
 		doInput();
+
+		splashInput();
 
 		blit(splash.texture, 450, 250);
 
@@ -43,7 +46,8 @@ int main(int argc, char *argv[]){
 
 		SDL_Delay(32);
 	}
-
+	
+	//main loop
 	while (1)
 	{
         
