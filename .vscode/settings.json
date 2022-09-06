@@ -7,7 +7,8 @@
         "player.h": "c",
         "draw.h": "c",
         "inttypes.h": "c",
-        "hero.h": "c"
+        "hero.h": "c",
+        "splash.h": "c"
     },
     "[markdown]": 
     { "editor.quickSuggestions": {

@@ -3,6 +3,7 @@
 #include "src/include/SDL2/SDL.h"
 #include "src/init.h"
 #include "src/draw.h"
+#include "src/splash.h"
 #include "src/input.h"
 #include "src/structs.h"
 #include "src/hero.h"
@@ -26,6 +27,8 @@ int main(int argc, char *argv[]){
 	initSDL();
 
 	atexit(cleanup);
+
+	throwSplash();
 
 	createHero();
 
