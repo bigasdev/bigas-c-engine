@@ -6,7 +6,7 @@
 #include <stdio.h>
 
 UI_Entity splash;
-int pressed = 0;
+int splashState = 0;
 
 void initSplash(){
     splash.texture = loadTexture(SPLASH_SCREEN);
@@ -16,6 +16,6 @@ void initSplash(){
 }
 void splashInput(){
     if(app.interacted){
-        pressed = 1;
+        splashState = 1;
     }
 }

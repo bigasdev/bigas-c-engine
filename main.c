@@ -3,6 +3,7 @@
 #include "src/include/SDL2/SDL.h"
 #include "src/init.h"
 #include "src/draw.h"
+#include "src/defs.h"
 #include "src/splash.h"
 #include "src/input.h"
 #include "src/structs.h"
@@ -18,13 +19,19 @@ void cleanup(){
 void start(){
 	memset(&app, 0, sizeof(App));
     memset(&Hero, 0, sizeof(Entity));
+#if SPLASH
 	memset(&splash, 0, sizeof(UI_Entity));
+	splashState = 0;
+#endif
 
 	initSDL();
 	atexit(cleanup);
 
 	createHero();
+	
+#if SPLASH
 	initSplash();
+#endif
 }
 
 
@@ -32,7 +39,8 @@ int main(int argc, char *argv[]){
 	start();
 
 	//splash screen loop
-	while(!pressed)
+#if SPLASH
+	while(!splashState)
 	{
 		prepareScene();
 
@@ -46,6 +54,7 @@ int main(int argc, char *argv[]){
 
 		SDL_Delay(32);
 	}
+#endif
 	
 	//main loop
 	while (1)

@@ -6,3 +6,7 @@
 #ifndef DEMO
     #define DEMO 0
 #endif
+
+#ifndef SPLASH
+    #define SPLASH 1
+#endif

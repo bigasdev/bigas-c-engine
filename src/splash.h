@@ -2,5 +2,5 @@
 
 extern void initSplash();
 extern void splashInput();
-extern int pressed;
+extern int splashState;
 extern UI_Entity splash;
