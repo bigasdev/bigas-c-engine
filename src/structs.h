@@ -23,7 +23,7 @@ typedef struct {
     char name;
     bool slowed;
     SDL_Texture *texture;
-    SDL_Texture *frames[4];
+    SDL_Texture *frames[];
 } Entity;
 
 typedef struct {
