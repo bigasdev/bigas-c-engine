@@ -32,13 +32,19 @@ SDL_Texture *loadTexture(char *file){
 	return texture;
 }
 
-void blit(SDL_Texture *texture, int x, int y)
+void blit(SDL_Texture *texture, int x, int y, int center)
 {
 	SDL_Rect dest;
 
 	dest.x = x;
 	dest.y = y;
+
 	SDL_QueryTexture(texture, NULL, NULL, &dest.w, &dest.h);
+
+	if(center){
+		dest.x = (SDL_GetWindowSurface(app.window)->h/2) - (dest.h);
+		dest.y = (SDL_GetWindowSurface(app.window)->w/2) - (dest.w);
+	}
 
 	SDL_RenderCopy(app.renderer, texture, NULL, &dest);
 }
