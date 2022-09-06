@@ -10,3 +10,7 @@
 #ifndef SPLASH
     #define SPLASH 1
 #endif
+
+#ifndef FULLSCREEN
+    #define FULLSCREEN 0
+#endif

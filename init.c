@@ -14,7 +14,11 @@ void initSDL(void){
 
 	IMG_Init(IMG_INIT_PNG | IMG_INIT_JPG);
 
-    windowFlags = 0;
+#if FULLSCREEN
+    windowFlags = SDL_WINDOW_FULLSCREEN_DESKTOP;
+#else
+	windowFlags = 0;
+#endif
 
     if(SDL_Init(SDL_INIT_VIDEO) < 0){
         printf("Couldn't initialize SDL: %s\n", SDL_GetError());
