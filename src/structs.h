@@ -7,6 +7,8 @@
 typedef struct{
     SDL_Renderer *renderer;
     SDL_Window *window;
+    int w_X;
+    int w_Y;
     int up;
     int down;
     int left;

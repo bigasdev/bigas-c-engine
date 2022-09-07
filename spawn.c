@@ -79,7 +79,7 @@ void spawnRemove(){
 }
 
 void initSpawn(){
-    baseEntity.x = 600;
+    baseEntity.x = 640;
     baseEntity.y = 200;
     baseEntity.moveSpeed = 2;
     baseEntity.health = 10;

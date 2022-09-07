@@ -55,12 +55,19 @@ void cd(){
     }
 }
 
+void debug(){
+    printf("\n Size of the scren: X%i Y%i", app.w_X, app.w_Y);
+}
+
 
 void interact(){
     if(interacted)return;
     interacted = 1;
     i_cooldown = 0;
-    printf("\nPlayer trying to interact");
+    printf("\n Player trying to interact");
+#if DEMO
+    debug();
+#endif
     add();
 }
 
