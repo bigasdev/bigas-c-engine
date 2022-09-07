@@ -36,6 +36,7 @@ void initSDL(void){
 	SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "linear");
 
 	app.renderer = SDL_CreateRenderer(app.window, -1, rendererFlags);
+	SDL_GetWindowSize(app.window, &app.w_X, &app.w_Y);
 
 	if (!app.renderer)
 	{

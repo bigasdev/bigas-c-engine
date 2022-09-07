@@ -42,7 +42,6 @@ void blit(SDL_Texture *texture, int x, int y, int center)
 	SDL_QueryTexture(texture, NULL, NULL, &dest.w, &dest.h);
 
 	if(center){
-		SDL_GetWindowSize(app.window, &app.w_X, &app.w_Y);
 		int w = app.w_X;
 		int y = app.w_Y;
 		dest.x = (w/2) - (dest.w/2);

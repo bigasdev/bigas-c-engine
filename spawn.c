@@ -79,8 +79,8 @@ void spawnRemove(){
 }
 
 void initSpawn(){
-    baseEntity.x = 640;
-    baseEntity.y = 200;
+    baseEntity.x = app.w_X;
+    baseEntity.y = 0;
     baseEntity.moveSpeed = 2;
     baseEntity.health = 10;
     baseEntity.texture = loadTexture("resources/sprites/items.png");
