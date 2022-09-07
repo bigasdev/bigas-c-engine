@@ -3,6 +3,7 @@
 #include "src/include/SDL2/SDL.h"
 #include "src/init.h"
 #include "src/draw.h"
+#include "src/spawn.h"
 #include "src/defs.h"
 #include "src/splash.h"
 #include "src/input.h"
@@ -25,6 +26,7 @@ void start(){
 #endif
 
 	initSDL();
+	initSpawn();
 	atexit(cleanup);
 
 	createHero();
@@ -68,6 +70,7 @@ int main(int argc, char *argv[]){
 
 		animatePlayer();
         blit(Hero.texture, Hero.x, Hero.y, 0);
+		readSpawn();
 
 		presentScene();
 

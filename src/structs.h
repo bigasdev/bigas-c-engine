@@ -22,6 +22,7 @@ typedef struct {
     int framesCount;
     char name;
     bool slowed;
+    struct Entity *next;
     SDL_Texture *texture;
     SDL_Texture *frames[];
 } Entity;
