@@ -67,6 +67,11 @@ void add(){
     increase += 16;
 }
 
+void remove(){
+    removeEntity(&fila);
+    increase -= 16;
+}
+
 void initSpawn(){
     baseEntity.x = 0;
     baseEntity.y = 200;
