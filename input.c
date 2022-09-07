@@ -31,6 +31,11 @@ void doKeyDown(SDL_KeyboardEvent *event)
 		{
 			app.interacted = 1;
 		}
+
+		if (event->keysym.scancode == SDL_SCANCODE_SPACE)
+		{
+			app.jump = 1;
+		}
 	}
 }
 
@@ -61,6 +66,11 @@ void doKeyUp(SDL_KeyboardEvent *event)
 		if (event->keysym.scancode == SDL_SCANCODE_E)
 		{
 			app.interacted = 0;
+		}
+
+		if (event->keysym.scancode == SDL_SCANCODE_SPACE)
+		{
+			app.jump = 0;
 		}
 	}
 }

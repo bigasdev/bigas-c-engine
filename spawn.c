@@ -67,7 +67,7 @@ void add(){
     increase += 16;
 }
 
-void remove(){
+void spawnRemove(){
     removeEntity(&fila);
     increase -= 16;
 }

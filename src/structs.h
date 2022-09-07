@@ -12,6 +12,7 @@ typedef struct{
     int left;
     int right;
     int interacted;
+    int jump;
 } App;
 
 typedef struct {

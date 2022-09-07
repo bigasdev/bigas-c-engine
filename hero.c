@@ -11,9 +11,15 @@ Entity Hero;
 int idleAnim = 0;
 int interacted = 0;
 //our main thread runs at 16ms, so we can use this to multiply for the cd i.e 16x2 = 32ms
-int cooldown = 0;
+int i_cooldown = 0;
 //cd for the interaction
 int int_cd = 16;
+
+int jumped = 0;
+//our main thread runs at 16ms, so we can use this to multiply for the cd i.e 16x2 = 32ms
+int j_cooldown = 0;
+//cd for the interaction
+int jump_cd = 16;
 
 void createHero(void){
     Hero.x = 600;
@@ -34,10 +40,18 @@ void animatePlayer(){
 }
 
 void cd(){
-    cooldown++;
-    if(cooldown >= int_cd){
-        interacted = 0;
-        cooldown = 0;
+    if(interacted){
+        i_cooldown++;
+        if(i_cooldown >= int_cd){
+            interacted = 0;
+        }
+    }   
+
+    if(jumped){
+        j_cooldown++;
+        if(j_cooldown >= jump_cd){
+            jumped = 0;
+        }
     }
 }
 
@@ -45,9 +59,17 @@ void cd(){
 void interact(){
     if(interacted)return;
     interacted = 1;
-    cooldown = 0;
+    i_cooldown = 0;
     printf("\nPlayer trying to interact");
     add();
+}
+
+void jump(){
+    if(jumped)return;
+    jumped = 1;
+    j_cooldown = 0;
+    printf("\n Player trying to jump");
+    spawnRemove();
 }
 
 void playerInputs(){
@@ -70,6 +92,9 @@ void playerInputs(){
     }
     if(app.interacted){
         interact();
+    }
+    if(app.jump){
+        jump();
     }
     if(app.up && app.right || app.up && app.left || app.down && app.right || app.down && app.left){
         Hero.slowed = true;
