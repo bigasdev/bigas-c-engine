@@ -26,7 +26,6 @@ void addEntity(Entity **spawn){
             // Caso contrario a gente vai utilizar como auxiliar o objeto que estava armazenado no next;
             aux = *spawn;
             while(aux->next){
-                printf("\n Another test!");
                 aux = aux->next;
                 // A gente vai entao pegar o next do auxiliar e assignar com a entity que criamos
             }
@@ -65,6 +64,7 @@ Entity* removeEntity(Entity **spawn){
 
 void add(){
     addEntity(&fila);
+    increase += 16;
 }
 
 void initSpawn(){
@@ -77,7 +77,6 @@ void initSpawn(){
     {
         /* code */  
         add();
-        increase += 16;
     }
     
 }

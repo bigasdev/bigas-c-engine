@@ -2,6 +2,7 @@
 #include "src/draw.h"
 #include <stdio.h>
 #include <inttypes.h>
+#include "src/spawn.h"
 #include "src/structs.h"
 #include "src/hero.h"
 
@@ -26,6 +27,11 @@ void animatePlayer(){
     Hero.texture = Hero.frames[sprite];
 }
 
+void interact(){
+    printf("\nPlayer trying to interact");
+    add();
+}
+
 void playerInputs(){
     if(Hero.slowed){
         Hero.moveSpeed = 2;
@@ -43,6 +49,9 @@ void playerInputs(){
     }
     if(app.left){
         Hero.x -= Hero.moveSpeed;
+    }
+    if(app.interacted){
+        interact();
     }
     if(app.up && app.right || app.up && app.left || app.down && app.right || app.down && app.left){
         Hero.slowed = true;
