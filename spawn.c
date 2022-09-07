@@ -13,7 +13,7 @@ void addEntity(Entity **spawn){
     printf("\nAdding a new entity with a x: %i", increase);
     Entity *aux, *entity = malloc(sizeof(Entity));
     if(entity){
-        entity->x = baseEntity.x + increase;
+        entity->x = baseEntity.x - increase;
         entity->y = baseEntity.y;
         entity->moveSpeed = baseEntity.moveSpeed;
         entity->health = baseEntity.health;
@@ -78,7 +78,7 @@ void spawnRemove(){
 }
 
 void initSpawn(){
-    baseEntity.x = 0;
+    baseEntity.x = 600;
     baseEntity.y = 200;
     baseEntity.moveSpeed = 2;
     baseEntity.health = 10;
