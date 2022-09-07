@@ -68,7 +68,7 @@ void add(){
 }
 
 void initSpawn(){
-    baseEntity.x = 400;
+    baseEntity.x = 0;
     baseEntity.y = 200;
     baseEntity.moveSpeed = 2;
     baseEntity.health = 10;

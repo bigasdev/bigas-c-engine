@@ -6,8 +6,14 @@
 #include "src/structs.h"
 #include "src/hero.h"
 
+
 Entity Hero;
 int idleAnim = 0;
+int interacted = 0;
+//our main thread runs at 16ms, so we can use this to multiply for the cd i.e 16x2 = 32ms
+int cooldown = 0;
+//cd for the interaction
+int int_cd = 16;
 
 void createHero(void){
     Hero.x = 600;
@@ -27,7 +33,19 @@ void animatePlayer(){
     Hero.texture = Hero.frames[sprite];
 }
 
+void cd(){
+    cooldown++;
+    if(cooldown >= int_cd){
+        interacted = 0;
+        cooldown = 0;
+    }
+}
+
+
 void interact(){
+    if(interacted)return;
+    interacted = 1;
+    cooldown = 0;
     printf("\nPlayer trying to interact");
     add();
 }
@@ -58,4 +76,5 @@ void playerInputs(){
     }else{
         Hero.slowed = false;
     }
+    cd();
 }
