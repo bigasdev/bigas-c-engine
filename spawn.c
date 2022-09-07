@@ -58,6 +58,7 @@ Entity* removeEntity(Entity **spawn){
         remover = *spawn;
         *spawn = remover->next;
     }else{
+        increase = 48;
         printf("Fila vazia!");
     }
     return remover;
