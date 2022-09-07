@@ -6,11 +6,13 @@
 
 Entity *fila = NULL;
 Entity baseEntity;
+int increase = 16;
 
 void addEntity(Entity **spawn){
+    printf("Adding a new entity with a x: %i\n", increase);
     Entity *aux, *entity = malloc(sizeof(Entity));
     if(entity){
-        entity->x = baseEntity.x + 16;
+        entity->x = baseEntity.x + increase;
         entity->y = baseEntity.y;
         entity->moveSpeed = baseEntity.moveSpeed;
         entity->health = baseEntity.health;
@@ -24,10 +26,11 @@ void addEntity(Entity **spawn){
             // Caso contrario a gente vai utilizar como auxiliar o objeto que estava armazenado no next;
             aux = *spawn;
             while(aux->next){
+                printf("\n Another test!");
                 aux = aux->next;
                 // A gente vai entao pegar o next do auxiliar e assignar com a entity que criamos
-                aux->next = entity;
             }
+            aux->next = entity;
         }
         
     
@@ -41,7 +44,7 @@ void readEntities(Entity **spawn){
     Entity *aux, *entity = NULL;
     if(*spawn){
         aux = *spawn;
-        printf("\n Entity na posicao X: %d e posicao Y: %d", aux->x, aux->y);
+        //printf("\n Entity na posicao X: %d e posicao Y: %d", aux->x, aux->y);
         blit(aux->texture, aux->x, aux->y, 0);
         entity = aux->next;
         readEntities(&entity);
@@ -55,7 +58,7 @@ Entity* removeEntity(Entity **spawn){
         remover = *spawn;
         *spawn = remover->next;
     }else{
-        printf("\Fila vazia!");
+        printf("Fila vazia!");
     }
     return remover;
 }
@@ -74,6 +77,7 @@ void initSpawn(){
     {
         /* code */  
         add();
+        increase += 16;
     }
     
 }
