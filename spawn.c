@@ -10,7 +10,7 @@ Entity baseEntity;
 int increase = 48;
 
 void addEntity(Entity **spawn){
-    printf("Adding a new entity with a x: %i\n", increase);
+    printf("\nAdding a new entity with a x: %i", increase);
     Entity *aux, *entity = malloc(sizeof(Entity));
     if(entity){
         entity->x = baseEntity.x + increase;
@@ -71,10 +71,10 @@ void add(){
 void spawnRemove(){
     r = removeEntity(&fila);
     if(r){
-        printf("\n Removed memory for the first entity");
+        increase -= 48;
+        printf("\n Removed memory for the first entity, the x is now at: %i", increase);
         free(r);
     }
-    increase -= 48;
 }
 
 void initSpawn(){
