@@ -35,6 +35,8 @@ SDL_Texture *loadTexture(char *file){
 void blit(SDL_Texture *texture, int x, int y, int center)
 {
 	SDL_Rect dest;
+	int w;
+	int h;
 
 	dest.x = x;
 	dest.y = y;
@@ -42,8 +44,9 @@ void blit(SDL_Texture *texture, int x, int y, int center)
 	SDL_QueryTexture(texture, NULL, NULL, &dest.w, &dest.h);
 
 	if(center){
-		dest.x = (SDL_GetWindowSurface(app.window)->h/2) - (dest.h);
-		dest.y = (SDL_GetWindowSurface(app.window)->w/2) - (dest.w);
+		SDL_GetWindowSize(app.window, &w, &h);
+		dest.x = (w/2) - (dest.w/2);
+		dest.y = (h/2) - (dest.h/2);
 	}
 
 	SDL_RenderCopy(app.renderer, texture, NULL, &dest);

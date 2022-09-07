@@ -50,7 +50,7 @@ int main(int argc, char *argv[]){
 
 		splashInput();
 
-		blit(splash.texture, 450, 0, 1);
+		blit(splash.texture, 0, 0, 1);
 
 		presentScene();
 
