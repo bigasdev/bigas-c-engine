@@ -6,7 +6,7 @@
 
 Entity *fila = NULL;
 Entity baseEntity;
-int increase = 16;
+int increase = 32;
 
 void addEntity(Entity **spawn){
     printf("Adding a new entity with a x: %i\n", increase);
@@ -85,39 +85,3 @@ void initSpawn(){
 void readSpawn(){
     readEntities(&fila);
 }
-
-
-/*int main()
-{
-    int choice, x, y;
-    Entity *r, *fila = NULL;
-    do{
-        printf("Escolha sua opcao: \n 0 - Sair \n 1 - Inserir \n 2 - Remover \n 3 - Checar \n"); 
-        scanf("%d", &choice);
-        switch(choice){
-            case 0:
-            break;
-            case 1:
-                printf("Inserindo uma entity na pilha... \n");
-                printf("Digite sua posicao X: \n");
-                scanf("%d", &x);
-                printf("Digite sua posicao y: \n");
-                scanf("%d", &y);
-                addEntity(&fila);
-            break;
-            case 2:
-                r = removeEntity(&fila);
-                if(r){
-                    printf("\nRemovido entity da posicao X: %d e posicao Y: %d", r->x, r->y);
-                    free(r);
-                }
-                break;
-            case 3:
-                readEntities(&fila);
-                break;
-            default:
-                break;
-        }
-    }while(choice != 0);
-    return 0;
-}*/
