@@ -5,4 +5,4 @@ extern void presentScene(void);
 extern void resetScene(void);
 extern SDL_Texture *loadTexture(char *file);
 void blit(SDL_Texture *texture, int size, int x, int y, int center);
-void blitAtlas(SDL_Texture *texture, int xx, int yy, int size, int x, int y, int center);
+void blitAtlas(SDL_Texture *texture, int spr, int xx, int yy, int size, int x, int y, int center);
