@@ -1,7 +1,7 @@
-#include "src/include/SDL2/SDL.h"
-#include "src/include/SDL2/SDL_image.h"
-#include "src/structs.h"
-#include "src/draw.h"
+#include "../srch/include/SDL2/SDL.h"
+#include "../srch/include/SDL2/SDL_image.h"
+#include "../srch/structs.h"
+#include "../srch/draw.h"
 #include <stdio.h>
 
 

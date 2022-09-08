@@ -1,6 +1,6 @@
-#include "src/include/SDL2/SDL.h"
-#include "src/input.h"
-#include "src/structs.h"
+#include "../srch/include/SDL2/SDL.h"
+#include "../srch/input.h"
+#include "../srch/structs.h"
 
 
 void doKeyDown(SDL_KeyboardEvent *event)

@@ -1,10 +1,10 @@
-#include "src/include/SDL2/SDL.h"
-#include "src/draw.h"
+#include "../srch/include/SDL2/SDL.h"
+#include "../srch/draw.h"
 #include <stdio.h>
 #include <inttypes.h>
-#include "src/spawn.h"
-#include "src/structs.h"
-#include "src/hero.h"
+#include "../srch/spawn.h"
+#include "../srch/structs.h"
+#include "../srch/hero.h"
 
 
 Entity Hero;

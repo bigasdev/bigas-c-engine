@@ -1,8 +1,8 @@
-#include "src/include/SDL2/SDL.h"
-#include "src/include/SDL2/SDL_image.h"
-#include "src/defs.h"
-#include "src/structs.h"
-#include "src/init.h"
+#include "../srch/include/SDL2/SDL.h"
+#include "../srch/include/SDL2/SDL_image.h"
+#include "../srch/defs.h"
+#include "../srch/structs.h"
+#include "../srch/init.h"
 #include <stdio.h>
 
 App app;
