@@ -4,6 +4,7 @@
 Framework created in C using the SDL lib for game development.
 ## About
 
-![logo](resources/logo.png)
+Bigas-C-Engine was created by study purpouses of my college, i needed to create some games in C so i decided to create a framework to help me along the way.
 
+🔎 [Doc Page](https://bigasdev.net/bigas-engine-docs/)
 
