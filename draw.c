@@ -56,3 +56,41 @@ void blit(SDL_Texture *texture, int size, int x, int y, int center)
 
 	SDL_RenderCopy(app.renderer, texture, NULL, &dest);
 }
+
+//blit created to use an atlas
+void blitAtlas(SDL_Texture *texture, int xx, int yy, int size, int x, int y, int center)
+{
+	SDL_Rect dest;
+	SDL_Rect rect;
+
+	dest.x = x;
+	dest.y = y;
+
+	SDL_QueryTexture(texture, NULL, NULL, &dest.w, &dest.h);
+
+	//resizing with the multiplier
+	dest.w = (dest.w*size);
+	dest.h = (dest.h*size);
+
+	rect.x = 8;
+	rect.y = 8;
+	rect.w = 8;
+	rect.h = 8;
+
+	dest.w = 16;
+	dest.h = 16;
+
+	/*printf("\n Checking the atlas for this texture: X%i Y%i", dest.w, dest.h);
+	printf("\n Trying to grab: X%i Y%i", rect.x, rect.y);*/
+
+	if(center){
+		int w = app.w_X;
+		int y = app.w_Y;
+
+		dest.x = (w/2) - (dest.w/2);
+		dest.y = (y/2) - (dest.h/2);
+
+	}
+
+	SDL_RenderCopy(app.renderer, texture, &rect, &dest);
+}

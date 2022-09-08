@@ -45,7 +45,9 @@ void readEntities(Entity **spawn){
     if(*spawn){
         aux = *spawn;
         //printf("\n Entity na posicao X: %d e posicao Y: %d", aux->x, aux->y);
-        blit(aux->texture, 2, aux->x, aux->y, 0);
+        //this is used to draw with an atlas:
+        //blitAtlas(aux->texture, 8, 8, 1, aux->x, aux->y, 0);
+        blit(aux->texture, 1, aux->x, aux->y, 0);
         entity = aux->next;
         readEntities(&entity);
     }
