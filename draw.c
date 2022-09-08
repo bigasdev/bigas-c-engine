@@ -58,7 +58,7 @@ void blit(SDL_Texture *texture, int size, int x, int y, int center)
 }
 
 //blit created to use an atlas
-void blitAtlas(SDL_Texture *texture, int spr, int xx, int yy, int size, int x, int y, int center)
+void blitAtlas(SDL_Texture *texture, int sprX, int sprY, int xx, int yy, int size, int x, int y, int center)
 {
 	SDL_Rect dest;
 	SDL_Rect rect;
@@ -70,11 +70,11 @@ void blitAtlas(SDL_Texture *texture, int spr, int xx, int yy, int size, int x, i
 
 	rect.x = 0+(xx*size);
 	rect.y = 0+(yy*size);
-	rect.w = spr;
-	rect.h = spr;
+	rect.w = sprX;
+	rect.h = sprY;
 
-	dest.w = spr*size;
-	dest.h = spr*size;
+	dest.w = sprX*size;
+	dest.h = sprY*size;
 
 	/*printf("\n Checking the atlas for this texture: X%i Y%i", dest.w, dest.h);
 	printf("\n Trying to grab: X%i Y%i", rect.x, rect.y);*/
