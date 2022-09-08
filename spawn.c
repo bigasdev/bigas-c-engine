@@ -7,7 +7,7 @@
 Entity *fila = NULL;
 Entity *r = NULL;
 Entity baseEntity;
-int increase = 48;
+int increase = 16;
 
 void addEntity(Entity **spawn){
     printf("\nAdding a new entity with a x: %i", increase);
@@ -69,13 +69,13 @@ Entity* removeEntity(Entity **spawn){
 
 void add(){
     addEntity(&fila);
-    increase += 48;
+    increase += 18;
 }
 
 void spawnRemove(){
     r = removeEntity(&fila);
     if(r){
-        increase -= 48;
+        increase -= 18;
         printf("\n Removed memory for the first entity, the x is now at: %i", increase);
         free(r);
     }
