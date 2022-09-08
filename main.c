@@ -50,7 +50,7 @@ int main(int argc, char *argv[]){
 
 		splashInput();
 
-		blit(splash.texture, 0, 0, 1);
+		blit(splash.texture, 3, 0, 0, 1);
 
 		presentScene();
 
@@ -69,7 +69,7 @@ int main(int argc, char *argv[]){
 		playerInputs();
 
 		animatePlayer();
-        blit(Hero.texture, Hero.x, Hero.y, 0);
+        blit(Hero.texture, 1, Hero.x, Hero.y, 0);
 		readSpawn();
 
 		presentScene();

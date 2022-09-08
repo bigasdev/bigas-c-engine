@@ -45,7 +45,7 @@ void readEntities(Entity **spawn){
     if(*spawn){
         aux = *spawn;
         //printf("\n Entity na posicao X: %d e posicao Y: %d", aux->x, aux->y);
-        blit(aux->texture, aux->x, aux->y, 0);
+        blit(aux->texture, 2, aux->x, aux->y, 0);
         entity = aux->next;
         readEntities(&entity);
     }

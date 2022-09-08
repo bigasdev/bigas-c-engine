@@ -32,7 +32,7 @@ SDL_Texture *loadTexture(char *file){
 	return texture;
 }
 
-void blit(SDL_Texture *texture, int x, int y, int center)
+void blit(SDL_Texture *texture, int size, int x, int y, int center)
 {
 	SDL_Rect dest;
 
@@ -41,11 +41,17 @@ void blit(SDL_Texture *texture, int x, int y, int center)
 
 	SDL_QueryTexture(texture, NULL, NULL, &dest.w, &dest.h);
 
+	//resizing with the multiplier
+	dest.w = (dest.w*size);
+	dest.h = (dest.h*size);
+
 	if(center){
 		int w = app.w_X;
 		int y = app.w_Y;
+
 		dest.x = (w/2) - (dest.w/2);
 		dest.y = (y/2) - (dest.h/2);
+
 	}
 
 	SDL_RenderCopy(app.renderer, texture, NULL, &dest);
