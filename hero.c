@@ -27,7 +27,7 @@ void createHero(void){
     Hero.moveSpeed = 2;
     Hero.framesCount = 2;
     Hero.health = 10;
-    Hero.texture = loadTexture("resources/sprites/playerAtlas.png");
+    Hero.texture = loadTexture("resources/sprites/atlas.png");
     //Hero.frames[0] = loadTexture("resources/sprites/player.png");
     //Hero.frames[1] = loadTexture("resources/sprites/player1.png");
     //hero = &_hero;

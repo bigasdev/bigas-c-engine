@@ -46,8 +46,9 @@ void readEntities(Entity **spawn){
         aux = *spawn;
         //printf("\n Entity na posicao X: %d e posicao Y: %d", aux->x, aux->y);
         //this is used to draw with an atlas:
-        //blitAtlas(aux->texture, 8, 8, 1, aux->x, aux->y, 0);
-        blit(aux->texture, 1, aux->x, aux->y, 0);
+        blitAtlas(aux->texture, 8, 8, 0, 2, 2, aux->x, aux->y, 0);
+        //normal blit
+        //blit(aux->texture, 1, aux->x, aux->y, 0);
         entity = aux->next;
         readEntities(&entity);
     }
@@ -85,7 +86,7 @@ void initSpawn(){
     baseEntity.y = 0;
     baseEntity.moveSpeed = 2;
     baseEntity.health = 10;
-    baseEntity.texture = loadTexture("resources/sprites/items.png");
+    baseEntity.texture = loadTexture("resources/sprites/atlas.png");
     for (size_t i = 0; i < 10; i++)
     {
         /* code */  
