@@ -23,6 +23,7 @@ typedef struct {
     int moveSpeed;
     int health;
     int framesCount;
+    int currentFrame;
     char name;
     bool slowed;
     struct Entity *next;

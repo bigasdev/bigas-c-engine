@@ -69,7 +69,7 @@ int main(int argc, char *argv[]){
 		playerInputs();
 
 		animatePlayer();
-        blitAtlas(Hero.texture, 20, 16, 0, 0, 2, Hero.x, Hero.y, 0);
+        blitAtlas(Hero.texture, 20, 16, Hero.currentFrame, 0, 2, Hero.x, Hero.y, 0);
 		readSpawn();
 
 		presentScene();

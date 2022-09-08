@@ -68,8 +68,8 @@ void blitAtlas(SDL_Texture *texture, int sprX, int sprY, int xx, int yy, int siz
 
 	SDL_QueryTexture(texture, NULL, NULL, &dest.w, &dest.h);
 
-	rect.x = 0+(xx*size);
-	rect.y = 0+(yy*size);
+	rect.x = 0+(xx*sprX);
+	rect.y = 0+(yy*sprY);
 	rect.w = sprX;
 	rect.h = sprY;
 
