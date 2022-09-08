@@ -8,7 +8,8 @@
         "draw.h": "c",
         "inttypes.h": "c",
         "hero.h": "c",
-        "splash.h": "c"
+        "splash.h": "c",
+        "stdio.h": "c"
     },
     "[markdown]": 
     { "editor.quickSuggestions": {

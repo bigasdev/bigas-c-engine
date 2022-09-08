@@ -1,6 +1,6 @@
-#include "src/structs.h"
-#include "src/spawn.h"
-#include "src/draw.h"
+#include "../srch/structs.h"
+#include "../srch/spawn.h"
+#include "../srch/draw.h"
 #include <stdio.h>
 #include <stdlib.h>
 

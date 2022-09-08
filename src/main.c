@@ -1,17 +1,16 @@
 #define SDL_MAIN_HANDLED
 
-#include "src/include/SDL2/SDL.h"
-#include "src/init.h"
-#include "src/draw.h"
-#include "src/spawn.h"
-#include "src/defs.h"
-#include "src/splash.h"
-#include "src/input.h"
-#include "src/structs.h"
-#include "src/hero.h"
+#include "../srch/include/SDL2/SDL.h"
+#include "../srch/init.h"
+#include "../srch/draw.h"
+#include "../srch/spawn.h"
+#include "../srch/defs.h"
+#include "../srch/splash.h"
+#include "../srch/input.h"
+#include "../srch/structs.h"
+#include "../srch/hero.h"
 #include <stdio.h>
 #include <string.h>
-#include "test.h"
 
 void cleanup(){
 

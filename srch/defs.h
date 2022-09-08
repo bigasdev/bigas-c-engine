@@ -1,7 +1,7 @@
 #define SCREEN_WIDTH 640    
 #define SCREEN_HEIGHT 480
 
-#define SPLASH_SCREEN "resources/logo.png"
+#define SPLASH_SCREEN "../resources/logo.png"
 
 #ifndef DEMO
     #define DEMO 0

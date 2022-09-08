@@ -1,8 +1,8 @@
-#include "src/include/SDL2/SDL.h"
-#include "src/draw.h"
-#include "src/defs.h"
-#include "src/structs.h"
-#include "src/splash.h"
+#include "../srch/include/SDL2/SDL.h"
+#include "../srch/draw.h"
+#include "../srch/defs.h"
+#include "../srch/structs.h"
+#include "../srch/splash.h"
 #include <stdio.h>
 
 UI_Entity splash;
